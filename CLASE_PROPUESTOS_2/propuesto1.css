@@ -1,0 +1,107 @@
+/* --- HERENCIA --- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* --- ANIMACIÓN RGB --- */
+@keyframes rgb {
+  0%   { color: red; }
+  33%  { color: lime; }
+  66%  { color: blue; }
+  100% { color: red; }
+}
+
+/* --- SELECTORES MÚLTIPLES --- */
+header, footer {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+/* --- SELECTORES COMBINADOS --- */
+header nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: #ff4c4c;
+}
+
+/* --- CASCADA --- */
+h3 {
+  color: #ccc;
+}
+
+section article h3 {
+  color: #ffcc00;
+}
+
+/* --- MENÚ HORIZONTAL DEBAJO DEL H1 --- */
+.menu-horizontal {
+  list-style: none;
+  margin: 15px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.menu-horizontal li {
+  animation: rgb 4s infinite linear;
+}
+
+header h1 {
+  margin: 0;
+  animation: rgb 3s infinite linear;
+}
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  border-bottom: 2px solid #ff4c4c;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+article {
+  background: #1f1f1f;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+article img {
+  display: block;
+  margin-top: 10px;
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+article img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  font-size: 0.9em;
+  color: #aaa;
+}
