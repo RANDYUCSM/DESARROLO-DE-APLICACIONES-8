@@ -1,90 +1,87 @@
-/* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
 /* Inicio */
 .inicio {
-  background: #1d2e55;
-  color: white;
-  padding: 3rem 2rem;
-  text-align: center;
+    background: #1d2e55;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
 }
 
 .inicio ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
 }
 
 .inicio li {
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
 }
 
 /* Productos */
 .productos {
-  padding: 2rem;
+    padding: 2rem;
 }
 
 .productos h2 {
-  text-align: center;
-  margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-/* Grid de productos en 3x3 */
 .grid-laptops {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .laptop {
-  flex: 1 1 calc(33.333% - 1.5rem);
-  background: #f2f2f2;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.3s, background 0.3s;
+    flex: 1 1 calc(33.333% - 1.5rem);
+    background: #f2f2f2;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
 }
 
 .laptop:hover {
-  transform: translateY(-5px);
-  background: #e0e0e0;
+    transform: translateY(-5px);
+    background: #e0e0e0;
 }
 
 .laptop img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin-top: 0.5rem;
+    max-width: 100%;
+    border-radius: 6px;
+    margin-top: 0.5rem;
 }
 
-/* Footer */
 .footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
 
 /* Breakpoints */
 @media (max-width: 900px) {
-  .laptop {
-    flex: 1 1 calc(50% - 1.5rem);
-  }
+    .laptop {
+        flex: 1 1 calc(50% - 1.5rem);
+    }
 }
 
 @media (max-width: 480px) {
-  .laptop {
-    flex: 1 1 100%;
-  }
+    .laptop {
+        flex: 1 1 100%;
+    }
 }
