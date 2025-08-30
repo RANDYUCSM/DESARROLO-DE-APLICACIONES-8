@@ -1,4 +1,4 @@
-/* --- HERENCIA --- */
+/* --------- ESTILOS GENERALES --------- */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,7 +7,7 @@ body {
   line-height: 1.6;
 }
 
-/* --- ANIMACIÓN RGB --- */
+/* --------- ANIMACIONES --------- */
 @keyframes rgb {
   0%   { color: red; }
   33%  { color: lime; }
@@ -15,29 +15,52 @@ body {
   100% { color: red; }
 }
 
-/* --- SELECTORES MÚLTIPLES --- */
-header, footer {
+/* --------- HEADER --------- */
+header {
   background-color: #1f1f1f;
   text-align: center;
   padding: 20px;
 }
 
-h1, h2, h3 {
-  font-weight: bold;
+header h1 {
+  margin: 0;
+  animation: rgb 3s infinite linear;
 }
 
-/* --- SELECTORES COMBINADOS --- */
+header nav {
+  margin-top: 15px;
+}
+
 header nav a {
   text-decoration: none;
   color: inherit;
   font-weight: bold;
+  transition: color 0.9s;
 }
 
 header nav a:hover {
   color: #ff4c4c;
 }
 
-/* --- CASCADA --- */
+/* --------- MENÚ --------- */
+.menu-horizontal {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.menu-horizontal li {
+  animation: rgb 6s infinite linear;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
 h3 {
   color: #ccc;
 }
@@ -46,29 +69,13 @@ section article h3 {
   color: #ffcc00;
 }
 
-/* --- MENÚ HORIZONTAL DEBAJO DEL H1 --- */
-.menu-horizontal {
-  list-style: none;
-  margin: 15px 0 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.menu-horizontal li {
-  animation: rgb 4s infinite linear;
-}
-
-header h1 {
-  margin: 0;
-  animation: rgb 3s infinite linear;
-}
-
 main {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 20px auto;
   padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 section {
@@ -81,11 +88,16 @@ section h2 {
   margin-bottom: 15px;
 }
 
+/* --------- ARTICULOS --------- */
 article {
   background: #1f1f1f;
   padding: 15px;
-  margin-bottom: 15px;
   border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+article:hover {
+  transform: translateY(-5px);
 }
 
 article img {
@@ -101,7 +113,47 @@ article img:hover {
   transform: scale(1.05);
 }
 
+/* --------- FOOTER --------- */
 footer {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 20px;
   font-size: 0.9em;
   color: #aaa;
+}
+
+/* --------- RESPONSIVE DESIGN --------- */
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-horizontal {
+    gap: 20px;
+  }
+  
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .menu-horizontal {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section h2 {
+    font-size: 1.2rem;
+  }
 }
