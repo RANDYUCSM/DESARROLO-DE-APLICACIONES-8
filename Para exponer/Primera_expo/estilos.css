@@ -70,16 +70,6 @@ body {
 .item-large {
     grid-column: span 2;
 }
-/*para pantallas */
-@media (max-width: 1024px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .item-large {
-        grid-column: span 2;
-    }
-}
 /*para celular*/
 @media (max-width: 600px) {
     .intro {
