@@ -30,13 +30,6 @@
             const tipo = document.getElementById('tipo').value;
             const resultado = document.getElementById('resultado');
 
-            if (isNaN(temperatura)) {
-                resultado.innerText = 'Por favor, ingrese un número válido.';
-                return;
-            }
-
-            let convertido;
-
             if (tipo === 'C') {
                 convertido = (temperatura * 9 / 5) + 32;
                 resultado.innerText = `${temperatura.toFixed(2)} °C = ${convertido.toFixed(2)} °F`;
@@ -47,5 +40,6 @@
         }
     </script>
 </body>
+
 
 </html>
