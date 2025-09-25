@@ -1,0 +1,53 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #f8f9fa;
+}
+.navbar .navbar-nav .nav-link {
+  color: #7bff00;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #0056b3;
+}
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.navbar .dropdown-menu {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  font-size: 1.1rem;
+}
+
+.form-control {
+  border-radius: 0.3rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}/*# sourceMappingURL=style_3.css.map */

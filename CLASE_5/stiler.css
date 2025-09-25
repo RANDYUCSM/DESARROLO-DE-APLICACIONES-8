@@ -1,0 +1,60 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+.inicio {
+  background-color: #007bff;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+.inicio h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.inicio p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.inicio .btn-primary {
+  background-color: #343a40;
+  border-color: #343a40;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+}
+.inicio .btn-primary:hover {
+  background-color: rgb(29.1379310345, 32.5, 35.8620689655);
+  border-color: rgb(29.1379310345, 32.5, 35.8620689655);
+}
+
+.productos {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+.productos .card {
+  border: none;
+  transition: transform 0.3s ease;
+}
+.productos .card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonios {
+  background-color: #6c757d;
+  color: white;
+  padding: 40px 0;
+}
+.testimonios .card {
+  background-color: #343a40;
+  color: white;
+  margin-bottom: 20px;
+}
+.testimonios .blockquote-footer {
+  font-size: 1rem;
+}/*# sourceMappingURL=stiler.css.map */
