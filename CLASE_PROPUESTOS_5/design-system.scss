@@ -1,0 +1,119 @@
+// =========================
+// 🎨 Variables
+// =========================
+$font-base: 'Arial', sans-serif;
+$font-size-base: 16px;
+
+$color-primary: #007bff;
+$color-secondary: #6c757d;
+$color-light: #f8f9fa;
+$color-dark: #343a40;
+$color-white: #ffffff;
+
+$spacing-unit: 1rem; // base spacing (16px)
+
+// =========================
+// 🛠️ Funciones
+// =========================
+@function lighten-color($color, $percent) {
+  @return lighten($color, $percent);
+}
+
+@function darken-color($color, $percent) {
+  @return darken($color, $percent);
+}
+
+@function rem($px) {
+  @return ($px / 16) * 1rem;
+}
+
+// =========================
+// 📦 Mixins
+// =========================
+@mixin rounded($radius: 10px) {
+  border-radius: $radius;
+}
+
+@mixin shadow($level: 1) {
+  @if $level == 1 {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  } @else if $level == 2 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  } @else {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@mixin transition($props...) {
+  transition: $props 0.3s ease-in-out;
+}
+
+// =========================
+// 🌐 Estilos Globales
+// =========================
+body {
+  font-family: $font-base;
+  font-size: $font-size-base;
+  margin: 0;
+  background: $color-light;
+  color: $color-dark;
+}
+
+// =========================
+// 🔹 Componentes
+// =========================
+.header {
+  background: $color-primary;
+  color: $color-white;
+  padding: $spacing-unit;
+  text-align: center;
+
+  h1 {
+    font-size: rem(32);
+    margin-bottom: rem(10);
+  }
+
+  p {
+    font-size: rem(18);
+    opacity: 0.9;
+  }
+}
+
+.card {
+  background: $color-white;
+  padding: $spacing-unit;
+  margin: $spacing-unit;
+  @include rounded(12px);
+  @include shadow(2);
+  @include transition(all);
+
+  &:hover {
+    background: lighten-color($color-primary, 40%);
+    transform: translateY(-5px);
+  }
+
+  h2 {
+    font-size: rem(24);
+    margin-bottom: rem(10);
+    color: $color-primary;
+  }
+
+  p {
+    font-size: rem(16);
+    color: $color-secondary;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: rem(10) rem(20);
+  background: $color-primary;
+  color: $color-white;
+  text-decoration: none;
+  @include rounded(6px);
+  @include transition(background);
+
+  &:hover {
+    background: darken-color($color-primary, 10%);
+  }
+}

@@ -1,0 +1,35 @@
+header {
+  background: url("https://picsum.photos/1920/1080?blur") center/cover no-repeat;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+.about img {
+  max-width: 200px;
+  border-radius: 50%;
+}
+
+.portfolio img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  background: #343a40;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
