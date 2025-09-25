@@ -1,0 +1,63 @@
+$primary-color: #7bff00;
+$hover-color: #0056b3;
+$navbar-bg-color: #f8f9fa;
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: $navbar-bg-color;
+
+    .navbar-nav .nav-link {
+        color: $primary-color;
+        font-weight: 600;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .dropdown-menu {
+        animation: slideIn 0.5s ease-out;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-size: 1.1rem;
+}
+
+.form-control {
+    border-radius: 0.3rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
