@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Propinas</title>
 </head>
+
 <body>
     <h1>Calculadora de Propinas</h1>
     <label for="cuenta">Monto total de la cuenta:</label>
@@ -18,10 +20,12 @@
         function calcularPropina() {
             const montoCuenta = parseFloat(document.getElementById('cuenta').value);
             const porcentajePropina = parseFloat(document.getElementById('porcentaje').value);
-            const propina = montoCuenta * (porcentajePropina / 100);/*%*/
-            document.getElementById('resultado').innerText =`Propina: $${propina.toFixed(2)}`;
+            const propina = montoCuenta * (porcentajePropina / 100); /*%*/
+            document.getElementById('resultado').innerText = `Propina: $${propina.toFixed(2)}`;
         }
     </script>
 </body>
+
+
 
 </html>
