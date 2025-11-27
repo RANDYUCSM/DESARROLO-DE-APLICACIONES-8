@@ -3,7 +3,7 @@ import { getConnection } from "./Base_de_Datos/coneccion.js";
 // Obtener usuarios
 const getUsuarios = async () => {
     try {
-        const database = await getConnection();   // Debe devolver la DB, no el client
+        const database = await getConnection();   
         const usuarios = await database.collection("usuarios").find().toArray();
 
         console.table(usuarios);
@@ -16,14 +16,14 @@ const getUsuarios = async () => {
 // Insertar usuario
 const addUsuarios = async () => {
     const usuario = { 
-        name: "Carlos", 
-        dni: "12345678", 
-        codigo: "2023788455", 
+        name: "Ricardo", 
+        correo: "ricardo.g@email.com", 
+        telefono: "987654321", 
         enable: true 
     };
 
     try {
-        const database = await getConnection();   // Debe devolver la DB
+        const database = await getConnection();   
         const result = await database.collection("usuarios").insertOne(usuario);
 
         console.log(result);
@@ -33,5 +33,5 @@ const addUsuarios = async () => {
     }
 };
 
-await getUsuarios();   // ahora sí existe
+await getUsuarios();   
 await addUsuarios();
